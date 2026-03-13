@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RouteWiz Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar glass">
+    <div class="logo-text">RouteWiz</div>
+    <div class="nav-links">
+        <a href="index.html">Place Order</a>
+        <a href="records.html">Records</a>
+        <a class="active" href="settings.html">Settings</a>
+        <button class="logout" onclick="logout()">Logout</button>
+        <button class="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+</div>
+
+<div class="settings-page glass">
+    <h2>Settings</h2>
+
+    <h3>Notifications</h3>
+    <label><input type="checkbox"> Email Alerts</label><br>
+    <label><input type="checkbox"> SMS Alerts</label><br>
+
+    <h3>Language</h3>
+    <select>
+        <option>English</option>
+        <option>Filipino</option>
+    </select>
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #dde7e8, #cdd8d9);
+    transition: background 0.4s ease, color 0.4s ease;
+    color: #333;
+}
+
+
+.glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.glow {
+    border: 1px solid rgba(0, 220, 200, 0.6);
+    box-shadow: 0 0 12px rgba(0, 220, 200, 0.3);
+}
+
+
+.topbar {
+    height: 64px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 14px 14px; 
+    margin-bottom: 16px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #066460;
+}
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #066460;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    font-weight: 600;
+    color: #00c2a8;
+}
+
+
+.layout {
+    display: flex;
+    height: calc(100vh - 80px); 
+    padding: 0 16px 16px 16px;
+    gap: 16px;
+}
+
+.sidebar {
+    width: 340px;
+    padding: 22px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#map {
+    flex: 1;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+
+.stop-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; 
+    font-family: inherit;
+}
+
+.stop-input:focus {
+    outline: none;
+    border-color: #00c2a8;
+    background: #fff;
+}
+
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.vehicle-card {
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: #00c2a8;
+    color: white;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00e2c8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 226, 200, 0.4);
+}
+
+.nav-links button {
+    width: auto;
+    padding: 8px 16px;
+    margin-top: 0;
+}
+
+
+
+
+.fare-card {
+    margin-top: auto; 
+    padding: 16px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background: rgba(0, 194, 168, 0.1);
+}
+
+
+.records-page, .settings-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.record-card {
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+body.dark {
+    background: linear-gradient(135deg, #0f1115, #1a1c23);
+    color: #e0e0e0;
+}
+
+body.dark .glass {
+    background: rgba(20, 22, 28, 0.75); 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .stop-input {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+body.dark .stop-input::placeholder {
+    color: #888;
+}
+
+body.dark .logo-text,
+body.dark a {
+    color: #00e2c8 !important;
+}
+
+body.dark .vehicle-card {
+    background: rgba(35, 38, 45, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .vehicle-card:hover {
+    background: rgba(50, 54, 65, 0.8);
+}
+
+body.dark .fare-card {
+    background: rgba(0, 194, 168, 0.15);
+}
+
+@media (max-width: 768px) {
+    /* 1. Lock the entire page to the exact screen height */
+    body {
+        height: 100vh;
+        height: 100dvh; /* Accounts for mobile browser URL bars */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden !important; /* Completely blocks full-page scrolling */
+    }
+
+    /* 2. Topbar takes exactly the space it needs and stops */
+    .topbar {
+        flex-shrink: 0;
+        height: auto;
+        padding: 12px;
+        margin-bottom: 0 !important; /* Removes desktop bottom margin */
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 0;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* 3. Layout automatically fills the exact remaining space perfectly */
+    .layout {
+        flex: 1; /* Takes all remaining height below topbar */
+        flex-direction: column-reverse !important; /* Flips map to the top */
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 0 !important;
+        height: auto !important; 
+        overflow: hidden !important; 
+    }
+
+    /* 4. Map takes exactly 45% of that remaining layout area */
+    #map {
+        width: 100% !important;
+        flex: 0 0 45% !important; /* Hard-locked height */
+        border-radius: 0 !important;
+    }
+
+    /* 5. Sidebar takes the remaining 55% and creates an internal scrollbar */
+    .sidebar {
+        width: 100% !important;
+        flex: 1 1 55% !important; 
+        max-height: 55% !important; 
+        border-right: none !important;
+        border-radius: 20px 20px 0 0; 
+        box-shadow: 0 -6px 20px rgba(0,0,0,0.4); /* Strong drop shadow over map */
+        z-index: 10;
+        padding: 20px 15px 30px 15px !important;
+        overflow-y: auto !important; /* The magic internal scrollbar */
+    }
+}

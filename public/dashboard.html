@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RouteWiz Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dash {
+            padding: 24px;
+        }
+
+        .card {
+            width: 300px;
+            background: rgba(255,255,255,0.35);
+            backdrop-filter: blur(18px);
+
+            padding: 24px;
+            margin-bottom: 18px;
+
+            border-radius: 20px;
+            box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Dashboard</h1>
+    <button class="logout" onclick="logout()">Logout</button>
+</header>
+
+<div class="dash">
+    <div class="card" id="stats"></div>
+    <a href="index.html"><button>Back to Map</button></a>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

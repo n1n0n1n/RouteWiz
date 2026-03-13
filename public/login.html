@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteWiz - Courier Portal - Login</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        
+        body {
+           
+            background-image: url('login_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 10, 20, 0.4); 
+            z-index: 1;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 2; 
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        .login-card {
+            width: 100%;
+            max-width: 440px;
+            padding: 50px 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            
+            
+            background: rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6); 
+            
+            
+            box-shadow: 0 0 15px rgba(0, 194, 168, 0.2), 0 15px 45px rgba(0, 0, 0, 0.6);
+        }
+
+       
+        .brand-header {
+            margin-bottom: 8px;
+        }
+
+        .brand-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: #00c2a8; 
+            margin: 0;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9); 
+            margin: 5px 0 0 0;
+            font-weight: 400;
+        }
+
+       
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        
+        .auth-form .stop-input {
+            background: rgba(255, 255, 255, 0.1); 
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 15px;
+        }
+
+        .auth-form .stop-input:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #00c2a8; 
+            box-shadow: 0 0 8px rgba(0, 194, 168, 0.4);
+        }
+
+        .auth-form .stop-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+       
+        .btn-primary {
+            background: linear-gradient(135deg, #00c2a8, #066460);
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 8px;
+            box-shadow: 0 4px 15px rgba(0, 194, 168, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #00e2c8, #00c2a8);
+            box-shadow: 0 6px 20px rgba(0, 226, 200, 0.5);
+        }
+
+       
+        .btn-secondary-ghost {
+            background: transparent;
+            color: #e0e0e0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: -6px;
+            transition: 0.3s;
+        }
+
+        .btn-secondary-ghost:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #00c2a8;
+            color: #00c2a8;
+        }
+
+        
+        .login-links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .login-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .login-links a:hover {
+            color: #00e2c8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="glass login-card">
+            
+            <div class="brand-header">
+                <h1 class="brand-title">RouteWiz</h1>
+                <p class="brand-subtitle">Courier Portal • Login</p>
+            </div>
+
+            <div class="auth-form">
+                <input type="email" id="email" class="stop-input" placeholder="Driver Email">
+                <input type="password" id="password" class="stop-input" placeholder="Password">
+                
+                <button class="btn-primary" onclick="login()">Log In</button>
+                
+                <button class="btn-secondary-ghost" onclick="register()">Create an Account</button>
+            </div>
+
+            <div class="login-links">
+                <a href="#" onclick="forgotPassword(); return false;">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RouteWiz Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar glass">
+    <div class="logo-text">RouteWiz</div>
+    <div class="nav-links">
+        <a href="index.html">Place Order</a>
+        <a class="active" href="records.html">Records</a>
+        <a href="settings.html">Settings</a>
+        <button class="logout" onclick="logout()">Logout</button>
+        <button class="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+</div>
+
+<div class="records-page glass">
+    <h2>Trip History</h2>
+    <ul id="list"></ul>
+</div>
+
+<script src="records.js"></script>
+
+</body>
+</html>
